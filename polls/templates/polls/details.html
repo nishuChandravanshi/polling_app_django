@@ -1,0 +1,9 @@
+<h1>{{ question.question_text }}</h1>
+<ul>
+  {% for choice in question.choice_set.all %}
+  <!--interpreted as pyth code question.choice_set.all()--
+    which returns an iterable of choice objs suitable for use in {% for %}tag-->
+
+  <li>{{ Choice.choice_text }}</li>
+  {% endfor %}
+</ul>
